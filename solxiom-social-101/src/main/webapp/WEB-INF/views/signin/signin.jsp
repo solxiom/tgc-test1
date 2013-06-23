@@ -12,7 +12,7 @@
   		<c:if test="${param.error eq 'multiple_users'}">
   		<div class="error">
   			Multiple local accounts are connected to the provider account.
-  			Try again with a different provider or with your username and password.
+  			Try again with facebook or with your username and password.
   		</div>
  	 	</c:if>
 	</div>
@@ -34,19 +34,10 @@
 	<p>Or you can <a href="<c:url value="/signup"/>">signup</a> with a new account.</p>
 </form>
 
-	<!-- TWITTER SIGNIN -->
-	<form id="tw_signin" action="<c:url value="/signin/twitter"/>" method="POST">
-		<button type="submit"><img src="<c:url value="/resources/social/twitter/sign-in-with-twitter-d.png"/>" /></button>
-	</form>
+
 
 	<!-- FACEBOOK SIGNIN -->
 	<form name="fb_signin" id="fb_signin" action="<c:url value="/signin/facebook"/>" method="POST">
         <input type="hidden" name="scope" value="publish_stream,user_photos,offline_access" />
 		<button type="submit"><img src="<c:url value="/resources/social/facebook/sign-in-with-facebook.png"/>" /></button>
 	</form>
-
-	<!-- LINKEDIN SIGNIN -->
-	<form name="li_signin" id="li_signin" action="<c:url value="/signin/linkedin"/>" method="POST">
-		<button type="submit">Sign In with LinkedIn</button>
-	</form>
-	

@@ -40,11 +40,9 @@ import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.facebook.web.DisconnectController;
-import org.springframework.social.linkedin.api.LinkedIn;
 import com.solxiom.social.facebook.PostToWallAfterConnectInterceptor;
 import com.solxiom.social.signin.SimpleSignInAdapter;
-import org.springframework.social.twitter.api.Twitter;
-import org.springframework.social.twitter.api.impl.TwitterTemplate;
+
 
 /**
  * Spring Social Configuration.
