@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-    @Value("${netbeans.hint.deploy.server}")
+   
     String jotain;
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
@@ -23,7 +23,7 @@ public class HomeController {
         @RequestMapping(value="/json")
 	public @ResponseBody List<String> test_json(){
             List<String> logList = new LinkedList<String>();
-                logList.add(" " + jotain);
+                logList.add(" mnmnmnmnmn ");
                 
             return logList;
 	}

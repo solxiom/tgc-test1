@@ -4,9 +4,10 @@
  */
 package com.solxiom.signincontrol.connection;
 
+
 /**
  *
- * @author Kavan
+ * @author Kavan Soleimanbeigi
  */
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,27 +15,34 @@ import org.springframework.social.oauth2.AccessGrant;
 
 public class ActiveConnection {
 
-    private AccessGrant accessGrant;
-    private HttpServletRequest redirect_cache;
+	private AccessGrant accessGrant;
+	private CachedRequest cahcedRequest;
 
-    public ActiveConnection() {
-        this.accessGrant = null;
-        this.redirect_cache = null;
-    }
+	public ActiveConnection() {
+		this.accessGrant = null;
+		this.cahcedRequest = null;
 
-    public AccessGrant getAccessGrant() {
-        return accessGrant;
-    }
+	}
 
-    public void setAccessGrant(AccessGrant accessGrant) {
-        this.accessGrant = accessGrant;
-    }
+	public AccessGrant getAccessGrant() {
+		return accessGrant;
+	}
 
-    public HttpServletRequest getRedirect_cache() {
-        return redirect_cache;
-    }
+	public void setAccessGrant(AccessGrant accessGrant) {
+		this.accessGrant = accessGrant;
+	}
 
-    public void setRedirect_cache(HttpServletRequest redirect_cache) {
-        this.redirect_cache = redirect_cache;
-    }
+	public CachedRequest getCachedRequest() {
+		return cahcedRequest;
+	}
+
+	public void setCachedrequest(HttpServletRequest request) {
+		if (request != null) {
+			this.cahcedRequest = new CachedRequestBuilder()
+					.buildCachedRequestFromRequest(request);
+		} else {
+			this.cahcedRequest = null;
+		}
+	}
+
 }

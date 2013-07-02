@@ -18,7 +18,16 @@ public class AppProperties {
             + "read_friendlists,publish_stream,email,"
             + "user_about_me,user_website,user_photos,"
             + "friends_photos,user_status,friends_status";
-    private String sessionIdKey="facebook_session_id";
+    private String sessionIdKey = "facebook_session_id";
+    private String auth_response = "http://www.solxiom.com/spring-master/facebook/connect";
+
+    public String getAuth_response() {
+        return auth_response;
+    }
+
+    public void setAuth_response(String auth_response) {
+        this.auth_response = auth_response;
+    }
 
     public String getSessionIdKey() {
         return sessionIdKey;
@@ -27,6 +36,7 @@ public class AppProperties {
     public void setSessionIdKey(String sessionIdKey) {
         this.sessionIdKey = sessionIdKey;
     }
+
     public String getFacebook_client_id() {
         return facebook_client_id;
     }
@@ -58,6 +68,4 @@ public class AppProperties {
     public void setFacebook_auth_scope(String facebook_auth_scope) {
         this.facebook_auth_scope = facebook_auth_scope;
     }
-    
-    
 }
