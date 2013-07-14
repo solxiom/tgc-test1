@@ -5,6 +5,7 @@
 package com.solxiom.signincontrol.entity;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -39,5 +40,28 @@ public class Profile {
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.facebook_id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Profile other = (Profile) obj;
+        if (!Objects.equals(this.facebook_id, other.facebook_id)) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }

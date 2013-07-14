@@ -4,6 +4,7 @@
  */
 package com.solxiom.signincontrol.entity;
 
+import java.util.Objects;
 import javax.validation.constraints.Size;
 
 /**
@@ -48,4 +49,31 @@ public class Comment {
 
         return string;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.text);
+        hash = 97 * hash + Objects.hashCode(this.profile);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Comment other = (Comment) obj;
+        if (!Objects.equals(this.text, other.text)) {
+            return false;
+        }
+        if (!Objects.equals(this.profile, other.profile)) {
+            return false;
+        }
+        return true;
+    }
+    
 }

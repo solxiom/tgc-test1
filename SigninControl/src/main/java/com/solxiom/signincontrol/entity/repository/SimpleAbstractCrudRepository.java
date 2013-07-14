@@ -25,6 +25,7 @@ public class SimpleAbstractCrudRepository<T> implements AbstractCrudRepository<T
     private void init(){
         map = new HashMap<String, T>();
     }
+    
     @Override
     public T create(T entity) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
