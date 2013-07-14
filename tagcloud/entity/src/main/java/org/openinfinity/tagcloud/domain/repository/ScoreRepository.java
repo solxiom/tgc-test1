@@ -15,7 +15,6 @@
  */
 package org.openinfinity.tagcloud.domain.repository;
 
-import java.math.BigInteger;
 
 import org.openinfinity.tagcloud.domain.entity.Score;
 

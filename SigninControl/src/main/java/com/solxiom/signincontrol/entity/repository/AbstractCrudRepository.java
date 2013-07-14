@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author soleikav
  */
-public interface AbstractCrudRepositoryInterface<T> {
+public interface AbstractCrudRepository<T> {
 
 	public T create(T entity);
 	

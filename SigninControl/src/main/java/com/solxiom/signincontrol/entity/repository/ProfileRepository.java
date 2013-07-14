@@ -10,7 +10,7 @@ import com.solxiom.signincontrol.entity.Profile;
  *
  * @author soleikav
  */
-public interface ProfileRepository extends AbstractCrudRepositoryInterface<Profile> {
+public interface ProfileRepository extends AbstractCrudRepository<Profile> {
     public Profile loadByFacebookId(String facebookId);
 
 }

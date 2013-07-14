@@ -4,10 +4,12 @@
  */
 package com.solxiom.signincontrol.entity.repository;
 
-import com.solxiom.signincontrol.entity.Comment;
+import com.solxiom.signincontrol.entity.Score;
 
 /**
  *
- * @author soleikav
+ * @author kavan
  */
-public interface CommentRepository extends AbstractCrudRepository<Comment> {}
+public interface ScoreRepository extends AbstractCrudRepository<Score> {}
+    
+

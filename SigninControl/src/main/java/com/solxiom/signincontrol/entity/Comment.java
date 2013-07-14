@@ -5,7 +5,6 @@
 package com.solxiom.signincontrol.entity;
 
 import javax.validation.constraints.Size;
-import org.codehaus.jackson.annotate.JsonTypeInfo.Id;
 
 /**
  *
