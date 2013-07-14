@@ -20,7 +20,26 @@ public class AppProperties {
             + "friends_photos,user_status,friends_status";
     private String sessionIdKey = "facebook_session_id";
     private String auth_response = "http://www.solxiom.com/spring-master/facebook/connect";
+    private String logout_redirect_link = "http://www.solxiom.com/spring-master/logout";
+    private String default_redirect_path = "/spring-master/check/connection";
 
+    public String getDefault_redirect_path() {
+        return default_redirect_path;
+    }
+
+    public void setDefault_redirect_path(String default_redirect_path) {
+        this.default_redirect_path = default_redirect_path;
+    }
+
+    public String getLogout_redirect_link() {
+        return logout_redirect_link;
+    }
+
+    public void setLogout_redirect_link(String logout_redirect_link) {
+        this.logout_redirect_link = logout_redirect_link;
+    }
+
+    
     public String getAuth_response() {
         return auth_response;
     }

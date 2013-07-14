@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.solxiom.signincontrol.connection;
+package com.solxiom.signincontrol.connection.exception;
 
 /**
  *

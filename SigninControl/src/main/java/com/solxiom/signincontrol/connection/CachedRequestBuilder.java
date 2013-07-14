@@ -10,6 +10,7 @@ package com.solxiom.signincontrol.connection;
  * @author Kavan Soleimanbeigi
  */
 
+import com.solxiom.signincontrol.connection.entity.CachedRequest;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class CachedRequestBuilder {
 
 	CachedRequest creq = new CachedRequest();
 
-	public CachedRequestBuilder setParameterMap(Map<String, String> parameterMap) {
+	public CachedRequestBuilder setParameterMap(Map<String, String[]> parameterMap) {
 
 		this.creq.setParameterMap(parameterMap);
 		return this;
@@ -128,4 +129,3 @@ public class CachedRequestBuilder {
 	}
 
 }
-
